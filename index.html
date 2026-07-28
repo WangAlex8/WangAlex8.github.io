@@ -121,6 +121,7 @@
                         			</video>
                     			</div>
 			                    <p><strong>Overview:</strong> Implemented a Proportional-Derivative (PD) controller to track time-varying joint trajectories. These trajectories were mapped using piecewise linear interpolation (LERP). Appropriate joint angles were calculated by applying a linear transformation to correct the reference frame mismatch between my custom 2-DOF Inverse Kinematics solver and the robot's local joint configuration. To improve calculation accuracy, I expanded the neural network architecture and adjusted linkage parameters to align with the quadruped’s specific hardware geometry. The simulation utilizes a 0.0003 second timestep and complex friction models to ensure realistic physical interactions. The Quadruped itself weighs nearly 21 kg and the motors have a maximum torque of 20 Nm.
+								<p><strong>Project Retrospective: </strong> While LERP served as a quick baseline for the simulation, it creates severe acceleration discontinuities and infinite jerk for real-world applications. This prevents hardware deployment. I used this critical lesson to directly inform my next project (the 5-Link Walker), where I bypassed LERP entirely in favor of smooth Bezier swing-foot trajectories and proper inverse kinematics.
 			                </section>
 			            </div>
 
