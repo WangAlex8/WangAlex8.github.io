@@ -90,7 +90,7 @@
                             			<strong>Figure 2:</strong> 5 link walker simulation using the full-order multi-rigid-body dynamics model of a humanoid robot.
                         			</p>
                     			</div>
-								<p><strong>Full-Order Robot Dynamics:</strong> Developed a nonlinear hybrid simulation for a 1.1 m tall, 32 kg 5-link bipedal walker in Python. Utilized the Pinocchio rigid-body dynamics library to continuously compute mass matrices $M(q)$ and non-linear effects $H(q, \dot q) = C(q, \dot q) + G(q)$, achieving a steady-state center of mass forward velocity of 0.3 m/s.</p>
+								<p><strong>Full-Order Robot Dynamics:</strong> Developed a nonlinear hybrid simulation for a 1.1 m tall, 32 kg 5-link bipedal walker in Python. Utilized the Pinocchio rigid-body dynamics library to continuously compute mass matrices $M(q)$ and non-linear effects $H(q, \dot q) = C(q, \dot q) + G(q)$, achieving a center of mass forward velocity of 0.3 m/s.</p>
 								<p><strong>Trajectory & Control Loops:</strong> Generated smooth Bezier curve swing-foot trajectories and mapped them to task-space via an algebraic inverse kinematics solver. Enforced trajectory tracking using a joint-space Proportional-Derivative (PD) controller.</p>
 								<p><strong>Impact Dynamics:</strong> Modeled discrete ground collisions using event-based differential equation solver (<code>solve_ivp</code> with a BDF solver to handle abrupt high impact forces). Enforced the foot-contact velocity constraint $J(q) \dot{q}^+ = 0$ to compute instantaneous post-impact joint velocities $\dot{q}^+$ and impact wrenches $\mathcal{F}$ by solving the coupled linear system:</p>
 									<span style="display: block; text-align: center; margin-top: -25px;">
@@ -121,7 +121,7 @@
                     			</div>
 								<p><strong>Application & Function:</strong> Designed a modular, grip-force measuring end-effector for the Unitree G1 arm to capture 6-axis capacitive force-torque data ($F_x, F_y, F_z, M_x, M_y, M_z$) during cooperative human-robot locomotion and physical guidance tasks.</p>
 								<p><strong>Ergonomics & Kinematics:</strong> Replaced the stock G1 hand with an ergonomic cylindrical housing suited for human palm geometry, ensuring natural comfort and security for cooperative locomotion tasks.</p>
-								<p><strong>Mechanical Design Optimization:</strong> Intentionally shortened the load-plate length, significantly reducing moment arms to maximize torque measurement accuracy across axial, shear and normal axes.</p>
+								<p><strong>Mechanical Design Optimization:</strong> Intentionally shortened the load-plate length, significantly reducing moment arms to maximize torque measurement accuracy across axial, shear, and normal axes.</p>
 								
 							</section>
 						</div>
