@@ -64,11 +64,7 @@
 								<span class="icon featured fa-microchip"></span>
 								<h3>Undergraduate Research Assistant</h3>
 								<p>TRACE Laboratory - Purdue University, School of Mechanical Engineering.</p>
-								
-								<p>Simulated humanoid robot's centroidal dynamics using the Linear Inverted Pendulum Model (LIPM) converted into state-space form and computed Center of Mass (CoM) trajectories by numerically solving a system of differential equations in Python. Implemented a deadbeat closed-loop 
-									controller to successfully stabilize position and velocity against gait disruptions.</p>
-								<div style="height: 38px; clear: both;"></div>
-								
+							
 								<h4 class="project-subtitle">End-to-End Reinforcement Learning for Humanoid Locomotion</h4>
 								
 								<div class="image featured">
@@ -141,9 +137,9 @@
 									</p>
 								</div>
 								
-								<p><strong>Reduced-Order Dynamic Modeling:</strong> Formulated continuous 2D Linear Inverted Pendulum Model (LIPM) equations of motion $\ddot{x} = \frac{g}{z_c}(x - p_x)$ at a fixed Center of Mass height of $z_c = 0.8\text{ m}$, yielding a system natural frequency of $\lambda = \sqrt{g / z_c} \approx 3.50\text{ s}^{-1}$.</p>
+								<p><strong>Reduced-Order Dynamic Modeling:</strong> Formulated continuous 2D Linear Inverted Pendulum Model (LIPM) equations of motion $\ddot{x} = \frac{g}{z_c}(x - p_x)$ at a fixed Center of Mass height of $z_c = 0.8\text{ m}$, yielding a system natural frequency of $\lambda = \sqrt{\frac{g}{z_c}} \approx 3.50\text{ s}^{-1}$.</p>
 								
-								<p><strong>Deadbeat Feedback Control:</strong> Implemented a deadbeat foot-placement controller sourced from UC Berkeley robotics literature to stabilize walking against external disruptions and accumulated errors. Applied the feedback gain vector $K_{\text{deadbeat}} = \begin{bmatrix} 1 & \frac{1}{\lambda} \coth(\lambda T) \end{bmatrix}$ for a step duration of $T = 0.5\text{ s}$, updating discrete Zero Moment Point (ZMP) locations $p_{x, \text{next}} = p_x + S_{\text{nom}} + K_{\text{deadbeat}} \cdot \mathbf{e}$ to eliminate pre-impact state tracking errors.</p>
+								<p><strong>Deadbeat Feedback Control:</strong> Implemented a deadbeat foot-placement controller sourced from UC Berkeley robotics literature to stabilize walking against external disruptions and accumulated errors. Applied the feedback gain vector $K_{\text{deadbeat}} = \begin{bmatrix} 1 & \frac{1}{\lambda} \coth(\lambda T) \end{bmatrix}$ for a step duration of $T = 0.5\text{ s}$, updating discrete Zero Moment Point (ZMP) locations $p_{x, \text{next}} = p_x + S_{\text{nom}} + K_{\text{deadbeat}} \cdot \mathbf{e}$ to eliminate tracking errors.</p>
 								
 								<p><strong>Hybrid Numerical Simulation:</strong> Integrated continuous phase trajectories between footstep placement events using <code>solve_ivp</code>, validating stability under initial position and velocity distruptions.</p>
 								
