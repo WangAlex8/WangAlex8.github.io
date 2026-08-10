@@ -130,6 +130,22 @@
 								<p><strong>Application & Function:</strong> Designed a modular, grip-force measuring end-effector for the Unitree G1 arm to capture 6-axis capacitive force-torque data ($F_x, F_y, F_z, M_x, M_y, M_z$) during cooperative human-robot locomotion and physical guidance tasks.</p>
 								<p><strong>Ergonomics & Kinematics:</strong> Replaced the stock G1 hand with an ergonomic cylindrical housing suited for human palm geometry, ensuring natural comfort and security for cooperative locomotion tasks.</p>
 								<p><strong>Mechanical Design Optimization:</strong> Intentionally shortened the load-plate length, significantly reducing moment arms to maximize torque measurement accuracy across axial, shear, and normal axes.</p>
+
+
+								<h4 class="project-subtitle">Reduced-Order LIPM Dynamics & Deadbeat Footstep Control</h4>
+
+								<div class="image featured">
+									<img src="images/lipm_com_trajectory_plot.png" alt="LIPM CoM Position Trajectory" style="display: block; width: 65%; height: auto; margin: 0 auto;">
+									<p style="text-align: center; font-style: italic; font-size: 0.9em; color: #666; margin-top: 0.8em; margin-bottom: 1em;">
+										<strong>Figure 8:</strong> Center of Mass position trajectory across step cycles under discrete deadbeat ZMP adjustment.
+									</p>
+								</div>
+								
+								<p><strong>Reduced-Order Dynamic Modeling:</strong> Formulated continuous 2D Linear Inverted Pendulum Model (LIPM) equations of motion $\ddot{x} = \frac{g}{z_c}(x - p_x)$ at a fixed Center of Mass height of $z_c = 0.8\text{ m}$, yielding a system natural frequency of $\lambda = \sqrt{g / z_c} \approx 3.50\text{ s}^{-1}$.</p>
+								
+								<p><strong>Deadbeat Feedback Control:</strong> Implemented a single-step deadbeat foot-placement controller to stabilize walking against state perturbations. Derived the feedback gain vector $K_{\text{deadbeat}} = \begin{bmatrix} 1 & \frac{1}{\lambda} \coth(\lambda T) \end{bmatrix}$ for a step duration of $T = 0.5\text{ s}$, dynamically updating discrete Zero Moment Point (ZMP) locations $p_{x, \text{next}} = p_x + S_{\text{nom}} + K_{\text{deadbeat}}\mathbf{e}$ to eliminate pre-impact state tracking errors within one step cycle.</p>
+								
+								<p><strong>Hybrid Numerical Simulation:</strong> Integrated continuous phase trajectories between footstep placement events using <code>scipy.integrate.solve_ivp</code>, validating orbital stability and state convergence under non-zero initial position and velocity offsets.</p>
 								
 							</section>
 						</div>
