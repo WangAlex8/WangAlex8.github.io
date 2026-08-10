@@ -143,9 +143,9 @@
 								
 								<p><strong>Reduced-Order Dynamic Modeling:</strong> Formulated continuous 2D Linear Inverted Pendulum Model (LIPM) equations of motion $\ddot{x} = \frac{g}{z_c}(x - p_x)$ at a fixed Center of Mass height of $z_c = 0.8\text{ m}$, yielding a system natural frequency of $\lambda = \sqrt{g / z_c} \approx 3.50\text{ s}^{-1}$.</p>
 								
-								<p><strong>Deadbeat Feedback Control:</strong> Implemented a single-step deadbeat foot-placement controller to stabilize walking against state perturbations. Derived the feedback gain vector $K_{\text{deadbeat}} = \begin{bmatrix} 1 & \frac{1}{\lambda} \coth(\lambda T) \end{bmatrix}$ for a step duration of $T = 0.5\text{ s}$, dynamically updating discrete Zero Moment Point (ZMP) locations $p_{x, \text{next}} = p_x + S_{\text{nom}} + K_{\text{deadbeat}}\mathbf{e}$ to eliminate pre-impact state tracking errors within one step cycle.</p>
+								<p><strong>Deadbeat Feedback Control:</strong> Implemented a deadbeat foot-placement controller sourced from UC Berkeley robotics literature to stabilize walking against external disruptions and accumulated errors. Applied the feedback gain vector $K_{\text{deadbeat}} = \begin{bmatrix} 1 & \frac{1}{\lambda} \coth(\lambda T) \end{bmatrix}$ for a step duration of $T = 0.5\text{ s}$, updating discrete Zero Moment Point (ZMP) locations $p_{x, \text{next}} = p_x + S_{\text{nom}} + K_{\text{deadbeat}} \cdot \mathbf{e}$ to eliminate pre-impact state tracking errors.</p>
 								
-								<p><strong>Hybrid Numerical Simulation:</strong> Integrated continuous phase trajectories between footstep placement events using <code>scipy.integrate.solve_ivp</code>, validating orbital stability and state convergence under non-zero initial position and velocity offsets.</p>
+								<p><strong>Hybrid Numerical Simulation:</strong> Integrated continuous phase trajectories between footstep placement events using <code>solve_ivp</code>, validating stability under initial position and velocity distruptions.</p>
 								
 							</section>
 						</div>
