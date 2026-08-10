@@ -64,9 +64,13 @@
                             			<source src="videos/Unitree G1 PPO MJX Basic Gait Render.mp4" type="video/mp4">
                         			</video>
 									<p style="text-align: center; font-style: italic; font-size: 0.9em; color: #666; margin-top: 0.8em; margin-bottom: 2em;">
-                            			<strong>Figure 1:</strong> Unitree G1 humanoid speed-walking gait simulation using the brax PPO framework in MuJoCo MJX.
+                            			<strong>Figure 1:</strong> Unitree G1 humanoid walking gait simulation using the Brax PPO framework in MuJoCo MJX.
                         			</p>
                     			</div>
+								<p><strong>End-to-End Reinforcement Learning:</strong> Trained a walking policy for the 29-DOF Unitree G1 using the Brax framework for PPO in MuJoCo Playground (MJX), achieving a centroidal velocity of 1.056 m/s and a velocity tracking error of 5.6% in simulation.</p>
+								<p><strong>Reward Shaping:</strong> Iteratively adjusted reward weights to balance target velocity tracking, base stabilization, foot clearance, stance phase duration, and joint torque minimization to achieve stable forward locomotion.</p>
+								<p><strong>Retrospective:</strong> Relying purely on end-to-end RL highlighted how sensitive policies are to manual reward shaping, which often feels like black-box trial and error. Moving forward, I am focusing on RL and model-based hybrid control architectures that incorporate system dynamics for more predictable, natural, and reliable locomotion.</p>
+								<div style="height: 30px; clear: both;"></div>
 								
 								<div class="image featured">
                         			<video width="100%" height="auto" autoplay loop muted playsinline>
@@ -87,8 +91,8 @@
 								</div>
 								<p><strong>Hardware & Mass Optimization:</strong> Designed a custom PLA mount for an NVIDIA Thor Supercomputer and 25,000 mAh power bank on the Unitree G1, achieving a 40% mass reduction compared to the stock Unitree Thor backpack.</p>
 								<p><strong>DFM & Thermal Design:</strong> Integrated flared vent geometries with expanded fit clearances to optimize convective airflow, accelerating heat dissipation from the computer and battery. Incorporated brass heat inserts to preserve thread integrity during frequent assembly/disassembly.</p>
-								<strong>Physics & Simulation:</strong> Computed real-world 3D spatial inertia tensors by scaling SolidWorks inertia matrices with measured physical mass, updating the MuJoCo XML configuration to accurately reflect modified upper-body dynamics.</p>
-								<div style="height: 25px; clear: both;"></div>
+								<strong>Physics & Simulation:</strong> Computed real-world 3D spatial inertia tensors by scaling SolidWorks inertia matrices with measured physical mass, updating the Unitree G1 MuJoCo XML configuration to accurately reflect modified upper-body dynamics.</p>
+								<div style="height: 30px; clear: both;"></div>
 								
 								<div class="image featured">
                         			<img src="images/宇树G1 force moment sensor attachment CAD.png" alt="Unitree G1 arm attachment for HRI" style="display: block; width: 65%; height: auto; margin: 0 auto;">
