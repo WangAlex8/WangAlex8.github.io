@@ -10,6 +10,14 @@
 		<meta property="og:url" content="https://WangAlex8.github.io" />
 		<meta property="og:image" content="https://WangAlex8.github.io/images/openGraphImageForPortfolio.jpg" />
 		<meta property="og:description" content="Mechanical Engineering Student at Purdue focusing mechanisms, machine design, robotics, and controls." />
+		<script>
+		  MathJax = {
+		    tex: {
+		      inlineMath: [['$', '$'], ['\\(', '\\)']]
+		    }
+		  };
+		</script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -79,7 +87,9 @@
                             			<strong>Figure 2:</strong> 5 link walker simulation using the full-order multi-rigid-body dynamics model of a humanoid robot.
                         			</p>
                     			</div>
-								<p>Developed a full-order nonlinear simulation of a 5-link bipedal robot using rigid-body dynamics and adaptive differential equation solving. Designed Bezier swing-foot trajectories, inverse kinematics, proportional-derivative joint controller, event-based foot-strike detection, and impulse-based contact dynamics for hybrid walking simulation.</p>
+								<p><strong>Full-Order Robot Dynamics:</strong> Developed a nonlinear hybrid simulation for a 1.1 m tall, 32 kg 5-link bipedal walker in Python. Utilized the Pinocchio rigid-body dynamics library to continuously compute mass matrices ($M(q)$) and non-linear effects ($H(q, \dot q) = C(q, \dot q) + G(q)$) achieving a steady-state center of mass forward velocity of 0.3 m/s.</p>
+								<p><strong>Trajectory & Control Loops:</strong> Generated smooth Bezier curve swing-foot trajectories and mapped them to task-space via an algebraic inverse kinematics solver. Enforced trajectory tracking using a joint-space Proportional-Derivative (PD) controller.</p>
+								<p><strong>Hybrid Impact Mechanics:</strong> Modeled discrete ground collisions using event-based root-finding (solve_ivp with a stiff BDF solver). Calculated instantaneous post-impact joint velocities ($\dot{\mathbf{q}}^+$) by constructing and solving a KKT-style linear system coupling the spatial inertia matrix with modified foot-contact Jacobians.</p>
 								<div style="height: 30px; clear: both;"></div>
 								
 								<div class="image featured">
