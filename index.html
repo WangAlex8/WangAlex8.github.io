@@ -77,7 +77,7 @@
 								<p><strong>End-to-End Reinforcement Learning:</strong> Trained a forward-walking policy for the 29-DOF Unitree G1 humanoid using Brax PPO within MuJoCo Playground (MJX). Leveraged GPU-accelerated, high-fidelity physics simulation across 256 parallel environments to generate millions of simulation steps, achieving a centroidal forward velocity of 1.056 m/s with a 5.6% velocity tracking error.</p>
 								<p><strong>Reward Shaping:</strong> Applied custom configuration overrides to a MuJoCo Playground joystick environment, iteratively tuning reward-term weights to stabilize locomotion. Rebalanced forward-velocity tracking, stance phase, and foot clearance rewards against stronger penalties on joint torques, action rates, foot slippage, and ground-impact forces. </p>
 								<p><strong>Retrospective:</strong> Relying purely on end-to-end RL highlighted how sensitive policies are to manual reward shaping, which often feels like black-box trial and error. Moving forward, I am focusing on RL and model-based hybrid control architectures that incorporate system dynamics for more predictable, natural, and reliable locomotion.</p>
-								<div style="height: 30px; clear: both;"></div>
+								<div style="height: 38px; clear: both;"></div>
 								
 								<div class="image featured">
                         			<video width="100%" height="auto" autoplay loop muted playsinline>
@@ -90,10 +90,11 @@
 								<p><strong>Full-Order Robot Dynamics:</strong> Developed a nonlinear hybrid simulation for a 1.1 m tall, 32 kg 5-link bipedal walker in Python. Utilized the Pinocchio rigid-body dynamics library to continuously compute mass matrices $M(q)$ and non-linear effects $H(q, \dot q) = C(q, \dot q) + G(q)$, achieving a steady-state center of mass forward velocity of 0.3 m/s.</p>
 								<p><strong>Trajectory & Control Loops:</strong> Generated smooth Bezier curve swing-foot trajectories and mapped them to task-space via an algebraic inverse kinematics solver. Enforced trajectory tracking using a joint-space Proportional-Derivative (PD) controller.</p>
 								<p><strong>Impact Dynamics:</strong> Modeled discrete ground collisions using event-based differential equation solver (<code>solve_ivp</code> with a BDF solver to handle abrupt high impact forces). Enforced the foot-contact velocity constraint $J\dot{q}^+ = 0$ to compute instantaneous post-impact joint velocities $\dot{q}^+$ and impact wrenches $\mathcal{F}$ by solving the coupled linear system:</p>
-								<div style="text-align: center; margin-top: -5px; margin-bottom: 10px;">
-  									$\begin{bmatrix} M(q) & -J^T \\ J & 0 \end{bmatrix} \begin{bmatrix} \dot{q}^+ \\ \mathcal{F} \end{bmatrix} = \begin{bmatrix} M(q)\dot{q}^- \\ 0 \end{bmatrix}$
-								</div>
-								<div style="height: 30px; clear: both;"></div>
+									<span style="display: block; text-align: center; margin-top: -8px;">
+   			 							$\begin{bmatrix} M(q) & -J^T \\ J & 0 \end{bmatrix} \begin{bmatrix} \dot{q}^+ \\ \mathcal{F} \end{bmatrix} = \begin{bmatrix} M(q)\dot{q}^- \\ 0 \end{bmatrix}$
+  								</span>
+								</p>
+								<div style="height: 38px; clear: both;"></div>
 								
 								<div class="image featured">
                         			<img src="images/宇树G1 NVIDIA Thor Mount CAD.png" alt="Unitree G1 Thor Mount CAD" style="display: block; width: 40%; height: auto; margin: 0 auto;">
@@ -106,7 +107,7 @@
 								<p><strong>Hardware & Mass Optimization:</strong> Designed a custom PLA mount for an NVIDIA Thor Supercomputer and 25,000 mAh power bank on the Unitree G1, achieving a 40% mass reduction compared to the stock Unitree Thor backpack.</p>
 								<p><strong>DFM & Thermal Design:</strong> Integrated flared vent geometries with expanded fit clearances to optimize convective airflow, accelerating heat dissipation from the computer and battery. Incorporated brass heat inserts to preserve thread integrity during frequent assembly/disassembly.</p>
 								<strong>Physics & Simulation:</strong> Computed real-world 3D spatial inertia tensors by scaling SolidWorks inertia matrices with measured physical mass, updating the Unitree G1 MuJoCo XML configuration to accurately reflect modified upper-body dynamics.</p>
-								<div style="height: 30px; clear: both;"></div>
+								<div style="height: 38px; clear: both;"></div>
 								
 								<div class="image featured">
                         			<img src="images/宇树G1 force moment sensor attachment CAD.png" alt="Unitree G1 arm attachment for HRI" style="display: block; width: 65%; height: auto; margin: 0 auto;">
