@@ -151,7 +151,7 @@
 					</footer>
 				</div>	
 			</article>
-		<!-- software sec -->
+		<!-- SOFTWARE SECTION -->
 		<article id="software" class="wrapper style2">
 			    <div class="container">
 			        <header>
@@ -159,7 +159,7 @@
 			            <p>Machine learning implementations and robotics simulations.</p>
 			        </header>
 			        <div class="row aln-center">
-			            <div class="col-12">
+			            <div class="col-11">
 			                <section class="box style1">
 			                    <span class="icon featured fa-code"></span>
 			                    <h3>Python MuJoCo Quadruped Walking Gait Simulation using closed-loop joint position control - Personal Project</h3>
@@ -175,7 +175,7 @@
 			                </section>
 			            </div>
 
-						<div class="col-12">
+						<div class="col-11">
 			                <section class="box style1">
 			                    <span class="icon featured fa-code"></span>
 			                    <h3>Inverse Kinematics Solver using Supervised Learning (PyTorch) - Personal Project</h3>
@@ -190,63 +190,27 @@
 			        </footer>
 			    </div>
 			</article>
-		<!-- mechanical  sec -->
-		<article id="mechanical" class="wrapper style3">
+		<!-- MECHANICAL SECTION -->
+		<article id="mechanical" class="wrapper style2">
 			    <div class="container">
         <header>
             <h2>Mechanical Projects</h2>
-            <p>Recent hardware designs, CAD models, and functional prototypes.</p>
+            <p>Recent mechanism designs and CAD models.</p>
         </header>
-        <div class="row">
-            <div class="col-6 col-12-small">
-                <article class="box style2">
-                    <header>
-                        <h3>2-DOF Humanoid Wrist Mechanism Prototype</h3>
-                    </header>
-                    <p>Designed, modeled and fabricated a 2-degree-of-freedom wrist prototype using SolidWorks for the Humanoid Robot Club. Handled the CAD assembly and the integration of 3D-printed components.</p>
-                    <div style="height: 18px; clear: both;"></div>
-                    <a href="#" class="image featured"><img src="images/2DOF_Wrist_CAD_img.png" alt="2-DOF Wrist Mechanism CAD" /></a>
-                    <a href="#" class="image fit"><img src="images/2DOF_Wrist_Photo1.jpg" alt="Wrist Physical" /></a>
-                    <a href="#" class="image fit"><img src="images/my 2 dof humanoid wrist mechanism prototype poster.jpg" alt="Wrist Poster" /></a>
-                    
-                    <p><strong>Overview:</strong> The goal of this mechanism is to enable complex hand movements while ensuring that it remains lightweight, minimizing the moment arm to reduce power consumption on the shoulder motors.</p>
-                    <p><strong>Design Implementation:</strong> To prevent back-driving without constant power draw, two small linear actuators with internal locking mechanisms were used, rather than pneumatics, hydraulics or even rotary motors coupled with a slider-crank linkage. This configuration, paired with spherical joints, provides active control over yaw and pitch while maintaining the commanded position without continuous power consumption.</p>
-                    <p><strong>Technical Challenges:</strong> The initial design used a central spherical joint to mount the end effector, which inadvertently introduced a passive roll degree of freedom. This issue was addressed by designing a custom yaw-pitch connection piece in SolidWorks to eliminate the passive rotation, ensuring the end effector remains stable under external loads.</p>
-                </article>
-                <article class="box style2" style="margin-top: 2em;">
-                    <header>
-                        <h3>1-DOF Pure Rigid Body Robot Finger Mechanism Design</h3>
-                    </header>
-                    <p>Designed a novel 1-DOF self-curling robotic finger mechanism comprised of 7 rigid body links.</p>
-					<div style="height: 18px; clear: both;"></div>
-                    <div class="image featured">
-                        <video width="100%" height="auto" autoplay loop muted playsinline>
-                            <source src="videos/7 link pure rigid body robot finger mechanism demonstration.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <a href="#" class="image fit"><img src="images/Kinematic Diagram of My Pure Rigid Body 7 Link 1 DOF Robot Finger Mechanism.jpg" alt="Kinematic Diagram of Finger Mechanism" /></a>
-                    <a href="#" class="image fit"><img src="images/My Rigid Body Body Finger Design - Finger Extended.png" alt="Extended Finger" /></a>
-                    <a href="#" class="image fit"><img src="images/My Rigid Body Body Finger Design - Finger Curled.png" alt="Curled Finger" /></a>
-                    <p><strong>Overview:</strong> Designed a novel multi-loop planar linkage mechanism that converts translational input from a single linear actuator into a curling motion, resembling a human finger. Verified the mechanism’s motion and confirmed the 1-DoF trajectory in SolidWorks. </p>
-					<p><strong>Kinematics:</strong> Configured 7 rigid links to achieve a mobility count of $M = 1$ using the Chebychev-Grübler-Kutzbach criterion, ensuring a single trajectory across all finger joints without passive degrees of freedom.</p>
-					<p><strong>Actuator Integration:</strong> Incorporated a compact linear actuator with an internal lead screw and nut mechanism to prevent backdriving, maintaining finger position without continuous power draw.</p>
 					
-                </article>
-            </div>
-
-            <div class="col-6 col-12-small">
-                <article class="box style2">
+		<div class="row aln-center">
+            	<div class="col-11">
+                	<section class="box style1">
                     <header>
                         <h3>Handheld Coaxial Contra-Rotating Fan</h3>
                     </header>
                     <p>Currently fabricating a handheld contra-rotating fan powered by a single motor. Designed and modeled a custom bevel gear transmission system in SolidWorks to achieve synchronized counter-rotation.</p>
-                    <div style="height: 18px; clear: both;"></div>
-                    <a href="#" class="image fit"><img src="images/3-15-Fan-Non-Transparent-View-Front.png" alt="Contra-Rotating Fan Non Transparent" /></a>
-                    <a href="#" class="image fit"><img src="images/3-15-Fan-Angled-View-Frontal.png" alt="Contra-Rotating Fan Non Transparent" /></a>
-                    <a href="#" class="image fit"><img src="images/3-15-Fan-Angled-View-Rear.png" alt="Contra-Rotating Fan Non Transparent Rear" /></a>
-                    <a href="#" class="image fit"><img src="images/3-15-Fan-Internal-Core-Mechanism-View-Front.png" alt="Mechanism front" /></a>
-                    <a href="#" class="image fit"><img src="images/3-15-Fan-Internal-Core-Mechanism-View-Rear.png" alt="Mechanism rear" /></a>
 					<div class="image featured">
+						<img src="images/3-15-Fan-Non-Transparent-View-Front.png" alt="Contra-Rotating Fan Non Transparent" style="display: block; width: 50%; height: auto; margin: 0 auto;">
+						<img src="images/3-15-Fan-Angled-View-Frontal.png" alt="Contra-Rotating Fan Transparent Frontal" style="display: block; width: 50%; height: auto; margin: 0 auto;">
+                   		<img src="images/3-15-Fan-Angled-View-Rear.png" alt="Contra-Rotating Fan Transparent Rear" style="display: block; width: 50%; height: auto; margin: 0 auto;">
+                    	<img src="images/3-15-Fan-Internal-Core-Mechanism-View-Front.png" alt="Contra-Rotating Fan Mechanism front" style="display: block; width: 50%; height: auto; margin: 0 auto;">
+						<img src="images/3-15-Fan-Internal-Core-Mechanism-View-Rear.png" alt="Contra-Rotating Fan Mechanism rear" style="display: block; width: 50%; height: auto; margin: 0 auto;">
 				   		<video width="100%" height="auto" autoplay loop muted playsinline>
 				        	<source src="videos/Contra-rotating fan mechanism current progress video.mp4" type="video/mp4">
 				    	</video>
@@ -255,14 +219,58 @@
                     <p><strong>Overview:</strong> Designed and currently fabricating a compact handheld fan featuring coaxial counter-rotating blades driven by a single motor. Undertaken as a novel challenge to integrate a custom bevel gear differential within a handheld housing.</p>
                     <p><strong>Drivetrain &amp; Kinematics:</strong> Engineered a custom bevel gear transmission in SolidWorks that splits single-motor torque into synchronized, counter-rotating fan blades. Enforced rotational symmetry and minimized high-RPM vibration by placing dual set-screws 180° apart on all shaft driven hubs.</p>
                     <p><strong>Prototyping &amp; Mechanical Testing:</strong> Successfully fabricated and assembled the functional internal core mechanism, printing the bevel gears, fan blades, and shaft hubs from Tough 1500 V2 resin to ensure precise gear tooth mesh, high surface finish, and thermal durability. Incorporated ball bearings and synthetic grease lubrication to eliminate friction.</p>
-                </article>
+                </section>
             </div>
+		</div>
+
+		 <div class="row aln-center">
+			    <div class="col-11">
+			        <section class="box style1">
+                    <header>
+                        <h3>1-DOF Pure Rigid Body Robot Finger Mechanism Design</h3>
+                    </header>
+                    <p>Designed a novel 1-DOF self-curling robotic finger mechanism comprised of 7 rigid body links.</p>
+					
+                    <div class="image featured">
+                        <video width="100%" height="auto" autoplay loop muted playsinline>
+                            <source src="videos/7 link pure rigid body robot finger mechanism demonstration.mp4" type="video/mp4">
+                        </video>
+						<img src="images/Kinematic Diagram of My Pure Rigid Body 7 Link 1 DOF Robot Finger Mechanism.jpg" alt="Kinematic Diagram of Finger Mechanism" style="display: block; width: 100%; height: auto; margin: 0 auto;">
+						<img src="images/My Rigid Body Finger Design - Finger Extended.png" alt="Extended Finger" style="display: block; width: 100%; height: auto; margin: 0 auto;">
+						<img src="images/My Rigid Body Finger Design - Finger Curled.png" alt="Curled Finger" style="display: block; width: 100%; height: auto; margin: 0 auto;">
+                    </div>
+                    
+                    <p><strong>Overview:</strong> Designed a novel multi-loop planar linkage mechanism that converts translational input from a single linear actuator into a curling motion, resembling a human finger. Verified the mechanism’s motion and confirmed the 1-DoF trajectory in SolidWorks. </p>
+					<p><strong>Kinematics:</strong> Configured 7 rigid links to achieve a mobility count of $M = 1$ using the Chebychev-Grübler-Kutzbach criterion, ensuring a single trajectory across all finger joints without passive degrees of freedom.</p>
+					<p><strong>Actuator Integration:</strong> Incorporated a compact linear actuator with an internal lead screw and nut mechanism to prevent backdriving, maintaining finger position without continuous power draw.</p>
+				</section>
+            </div>
+		</div>
+					
+        <div class="row aln-center">
+            <div class="col-11">
+                <section class="box style1">
+                    <header>
+                        <h3>2-DOF Humanoid Wrist Mechanism Prototype</h3>
+                    </header>
+                    <p>Designed, modeled and fabricated a 2-degree-of-freedom wrist prototype using SolidWorks for the Humanoid Robot Club. Handled the CAD assembly and the integration of 3D-printed components.</p>
+                    <div class="image featured">
+						<img src="images/2DOF_Wrist_CAD_img.png" alt="2 DOF Wrist Mechanism CAD" style="display: block; width: 100%; height: auto; margin: 0 auto;">
+                    	<img src="images/2DOF_Wrist_Photo1.jpg" alt="2 DOF Wrist Physical" style="display: block; width: 100%; height: auto; margin: 0 auto;">
+                  		<img src="images/my 2 dof humanoid wrist mechanism prototype poster.jpg" alt="2 DOF Wrist Poster" style="display: block; width: 100%; height: auto; margin: 0 auto;">
+                    </div>
+                    <p><strong>Overview:</strong> The goal of this mechanism is to enable complex hand movements while ensuring that it remains lightweight, minimizing the moment arm to reduce power consumption on the shoulder motors.</p>
+                    <p><strong>Design Implementation:</strong> To prevent back-driving without constant power draw, two small linear actuators with internal locking mechanisms were used, rather than pneumatics, hydraulics or even rotary motors coupled with a slider-crank linkage. This configuration, paired with spherical joints, provides active control over yaw and pitch while maintaining the commanded position without continuous power consumption.</p>
+                    <p><strong>Technical Challenges:</strong> The initial design used a central spherical joint to mount the end effector, which inadvertently introduced a passive roll degree of freedom. This issue was addressed by designing a custom yaw-pitch connection piece in SolidWorks to eliminate the passive rotation, ensuring the end effector remains stable under external loads.</p>
+                </section>
+					 
+			
         </div>
         
     </div>
 			
 </article>
-	<!-- education sec -->
+	<!-- EDUCATION SECTION -->
 		<article id="education" class="wrapper style1">
 			<div class="container">
 				<header>
@@ -290,7 +298,7 @@
 			</div>
 		</article>
 
-		<!-- technical skills sec -->
+		<!-- TECHNICAL SKILLS SECTION -->
 		<article id="skills" class="wrapper style2">
 			<div class="container">
 				<header>
