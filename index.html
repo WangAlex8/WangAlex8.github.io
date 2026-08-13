@@ -92,7 +92,7 @@
                     			</div>
 								<p><strong>Full-Order Robot Dynamics:</strong> Developed a nonlinear hybrid simulation for a 1.1 m tall, 32 kg 5-link bipedal walker in Python. Utilized the Pinocchio rigid-body dynamics library to continuously compute mass matrices $M(q)$ and non-linear effects $H(q, \dot q) = C(q, \dot q) + G(q)$, achieving a center of mass forward velocity of 0.3 m/s.</p>
 								<p><strong>Trajectory & Control Loops:</strong> Generated smooth Bezier curve swing-foot trajectories and mapped them to task-space via an analytical inverse kinematics solver. Enforced trajectory tracking using a joint-space Proportional-Derivative (PD) controller.</p>
-								<p><strong>Impact Dynamics:</strong> Modeled discrete ground collisions using event-based differential equation solver (<code>solve_ivp</code> with a BDF solver to handle abrupt high impact forces). Enforced the foot-contact velocity constraint $J(q) \dot{q}^+ = 0$ to compute instantaneous post-impact joint velocities $\dot{q}^+$ and impact wrenches $\mathcal{F}$ by solving the coupled linear system:</p>
+								<p><strong>Impact Dynamics:</strong> Modeled discrete ground collisions using event-based differential equation solver (<code>solve_ivp</code> with a BDF solver to handle abrupt high impact forces). Enforced the foot-contact velocity constraint $J(q) \dot{q}^+ = 0$ and the impact dyanmics equation $M(q)(\dot q^+ - \dot q^-)=J(q)^T \mathcal{F}$ to compute instantaneous post-impact joint velocities $\dot{q}^+$ and impact impluse wrenches $\mathcal{F}$ by solving the coupled linear system:</p>
 									<span style="display: block; text-align: center; margin-top: -25px;">
    			 							$\begin{bmatrix} M(q) & -J(q)^T \\ J(q) & 0 \end{bmatrix} \begin{bmatrix} \dot{q}^+ \\ \mathcal{F} \end{bmatrix} = \begin{bmatrix} M(q)\dot{q}^- \\ 0 \end{bmatrix}$
   								</span>
@@ -175,7 +175,7 @@
 			                </section>
 			            </div>
 
-					<div class="row aln-center">
+				
 						<div class="col-11">
 			                <section class="box style1">
 			                    
